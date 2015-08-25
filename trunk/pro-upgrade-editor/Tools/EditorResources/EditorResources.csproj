@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F0F523DA-3085-4BE5-AC09-5F680F0E392E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EditorResources</RootNamespace>
+    <AssemblyName>EditorResources</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Form Test|AnyCPU'">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>none</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\Base\PESlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Base\PESlider.Designer.cs">
+      <DependentUpon>PESlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Base\PECheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Base\PECheckBox.Designer.cs">
+      <DependentUpon>PECheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Base\PEEditBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Base\PEEditBox.Designer.cs">
+      <DependentUpon>PEEditBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Base\PELabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Base\PELabel.Designer.cs">
+      <DependentUpon>PELabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Base\PEButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Base\PEButton.Designer.cs">
+      <DependentUpon>PEButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Base\PEGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Base\PEGroupBox.Designer.cs">
+      <DependentUpon>PEGroupBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Base\PUEControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\DifficultyButton.cs" />
+    <Compile Include="Components\PETrackDifficulty.cs" />
+    <Compile Include="Components\PEWaveViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\PEWaveViewer.Designer.cs">
+      <DependentUpon>PEWaveViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\PEMidiTrack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\PEMidiTrack.Designer.cs">
+      <DependentUpon>PEMidiTrack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\PEMidiTrackEditPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\PEMidiTrackEditPanel.Designer.cs">
+      <DependentUpon>PEMidiTrackEditPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Base\PEListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Base\PEListView.Designer.cs">
+      <DependentUpon>PEListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Base\PEPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Base\PEPanel.Designer.cs">
+      <DependentUpon>PEPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\PEPopupWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\PEPopupWindow.Designer.cs">
+      <DependentUpon>PEPopupWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\PEWaveViewerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\PEWaveViewerControl.Designer.cs">
+      <DependentUpon>PEWaveViewerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\PEWebTabImportPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\PEWebTabImportPanel.Designer.cs">
+      <DependentUpon>PEWebTabImportPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\WebTabTrackProperties.cs" />
+    <Compile Include="Util\Util.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PEResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Components\Base\PESlider.resx">
+      <DependentUpon>PESlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Base\PECheckBox.resx">
+      <DependentUpon>PECheckBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Base\PEEditBox.resx">
+      <DependentUpon>PEEditBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Base\PELabel.resx">
+      <DependentUpon>PELabel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Base\PEButton.resx">
+      <DependentUpon>PEButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Base\PEGroupBox.resx">
+      <DependentUpon>PEGroupBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Base\PUEControl.resx">
+      <DependentUpon>PUEControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\PEWaveViewer.resx">
+      <DependentUpon>PEWaveViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\PEMidiTrack.resx">
+      <DependentUpon>PEMidiTrack.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\PEMidiTrackEditPanel.resx">
+      <DependentUpon>PEMidiTrackEditPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Base\PEListView.resx">
+      <DependentUpon>PEListView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Base\PEPanel.resx">
+      <DependentUpon>PEPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\PEPopupWindow.resx">
+      <DependentUpon>PEPopupWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\PEWebTabImportPanel.resx">
+      <DependentUpon>PEWebTabImportPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PEResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtk-refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\CDRom.gif" />
+    <Content Include="Resources\close.png" />
+    <Content Include="Resources\doc_music.png" />
+    <Content Include="Resources\folder_classic_type_music.png" />
+    <Content Include="Resources\folder_explore.png" />
+    <Content Include="Resources\folder_modernist_type_music.png" />
+    <Content Include="Resources\grayround.png" />
+    <Content Include="Resources\greenGrad1.bmp" />
+    <Content Include="Resources\lightBlueFade.png" />
+    <Content Include="Resources\lightBlueFade2.png" />
+    <Content Include="Resources\lightGrayAlphaFade.png" />
+    <Content Include="Resources\lightGraySmall.png" />
+    <Content Include="Resources\lightGraySmall2.bmp" />
+    <Content Include="Resources\lightGraySmall2.png" />
+    <Content Include="Resources\lightGraySmall3.bmp" />
+    <Content Include="Resources\music %281%29.png" />
+    <Content Include="Resources\music--exclamation.png" />
+    <Content Include="Resources\music--minus.png" />
+    <Content Include="Resources\music--pencil.png" />
+    <Content Include="Resources\music--plus.png" />
+    <Content Include="Resources\music-beam-16.png" />
+    <Content Include="Resources\music.png" />
+    <Content Include="Resources\music_beam.png" />
+    <Content Include="Resources\music_green.png" />
+    <Content Include="Resources\music_grey.png" />
+    <Content Include="Resources\OpenFolder.gif" />
+    <Content Include="Resources\Partition.png" />
+    <Content Include="Resources\Task.gif" />
+    <Content Include="Resources\tb3.png" />
+    <Content Include="Resources\topbottom.png" />
+    <Content Include="Resources\topbottomblue.png" />
+    <Content Include="Resources\topbottomwhite.png" />
+    <Content Include="Resources\USBBlueArrow.png" />
+    <Content Include="Resources\USBExcl.png" />
+    <Content Include="Resources\USBFlash.png" />
+    <Content Include="Resources\USBGreenPlus.png" />
+    <Content Include="Resources\USBLogo.png" />
+    <Content Include="Resources\USBPencil.png" />
+    <Content Include="Resources\USBRedMinus.png" />
+    <Content Include="Resources\XBJoy.gif" />
+    <Content Include="Resources\XPDrive.gif" />
+    <Content Include="Resources\XPFolder.gif" />
+    <Content Include="Resources\XPLens.gif" />
+    <Content Include="Resources\XPRecycle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NAudio\NAudio.WindowsMediaFormat\NAudio.WindowsMediaFormat.csproj">
+      <Project>{1868fc77-fd6f-4881-9cf5-de7451806bfa}</Project>
+      <Name>NAudio.WindowsMediaFormat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NAudio\NAudio\NAudio.csproj">
+      <Project>{da4f02e3-0b5e-42cd-b8d9-5583fa51d66e}</Project>
+      <Name>NAudio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PUECommon\PUECommon.csproj">
+      <Project>{7767D3DD-6E1C-419E-9092-F3F3DDDF3D87}</Project>
+      <Name>PUECommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sanford.Multimedia.Midi\Sanford.Multimedia.Midi.csproj">
+      <Project>{4269C72A-8D3A-4737-8F89-72EAA33EA9E1}</Project>
+      <Name>Sanford.Multimedia.Midi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

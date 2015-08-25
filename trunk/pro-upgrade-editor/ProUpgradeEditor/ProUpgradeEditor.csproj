@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{501A0458-E01C-404D-A55D-11627CC4B48F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProUpgradeEditor</RootNamespace>
+    <AssemblyName>ProUpgradeEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <PlatformTarget>x86</PlatformTarget>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Editor|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Editor\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Form Test|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sanford.Multimedia, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Sanford.Multimedia.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AnimationRoutine.cs" />
+    <Compile Include="UI\ControlAnimator.cs" />
+    <Compile Include="UI\ControlAnimatorItem.cs" />
+    <Compile Include="UI\ControlAnimatorType.cs" />
+    <Compile Include="UI\CopyPatternPreset.cs" />
+    <Compile Include="UI\DTAFile.cs" />
+    <Compile Include="UI\DTAFileNode.cs" />
+    <Compile Include="UI\DTASegment.cs" />
+    <Compile Include="UI\EditorTrackDifficulty.cs" />
+    <Compile Include="UI\FindMatchingPatternConfig.cs" />
+    <Compile Include="UI\ListedModifier.cs" />
+    <Compile Include="UI\ListViewColumnSorter.cs" />
+    <Compile Include="UI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\MatchingCopyPattern.cs" />
+    <Compile Include="UI\MidiEventData1Comparer.cs" />
+    <Compile Include="UI\MidiEventData2Comparer.cs" />
+    <Compile Include="UI\MidiInputListItem.cs" />
+    <Compile Include="UI\MidiOutputListItem.cs" />
+    <Compile Include="UI\naudioPlayer.cs" />
+    <Compile Include="UI\PropertyType.cs" />
+    <Compile Include="UI\SelectNextEnum.cs" />
+    <Compile Include="UI\SongCacheList.cs" />
+    <Compile Include="UI\SongListSortMode.cs" />
+    <Compile Include="UI\SongUtilFindInFileConfig.cs" />
+    <Compile Include="UI\SongUtilSearchResult.cs" />
+    <Compile Include="UI\StoredChordSearchConfig.cs" />
+    <Compile Include="UI\stringObject.cs" />
+    <Compile Include="UI\TabPopout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TabPopout.Designer.cs">
+      <DependentUpon>TabPopout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TabSiteMeasureAttribute.cs" />
+    <Compile Include="UI\ThreadedTimerParam.cs" />
+    <Compile Include="UI\ThreadTimer.cs" />
+    <Compile Include="UI\USBDrive.cs" />
+    <Compile Include="UI\USBDriveEntry.cs" />
+    <Compile Include="UI\UtilProperty.cs" />
+    <EmbeddedResource Include="ProResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\TabPopout.resx">
+      <DependentUpon>TabPopout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UI\MainFormBatchMethods.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainFormMethods.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainFormMidiDevice.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainFormProperties.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainFormSongModifiers.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <None Include="Resources\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="DataLayer\Guitar6\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\1341680345_audio-midi.png" />
+    <Content Include="Resources\1341680384_folder_midi.png" />
+    <Content Include="Resources\Add.png" />
+    <Content Include="Resources\ark_extract.png" />
+    <Content Include="Resources\blue-document-music-playlist.png" />
+    <Content Include="Resources\blue-folder-open-document-music-playlist.png" />
+    <Content Include="Resources\blue-folder-open-document-music.png" />
+    <Content Include="Resources\CDRom.gif" />
+    <Content Include="Resources\clear-left.png" />
+    <Content Include="Resources\clipboard-sign-out.png" />
+    <Content Include="Resources\copy.png" />
+    <Content Include="textEvents.txt" />
+    <None Include="Resources\cross.png" />
+    <Content Include="Resources\disk.png" />
+    <Content Include="Resources\document-music-playlist.png" />
+    <Content Include="Resources\doc_music.png" />
+    <Content Include="Resources\edit-select-all.png" />
+    <Content Include="Resources\EditorIcon.ico" />
+    <Content Include="Resources\external.png" />
+    <Content Include="Resources\fenderguitar.bmp" />
+    <Content Include="Resources\file_extension_ace.png" />
+    <Content Include="Resources\file_extension_aif.png" />
+    <Content Include="Resources\file_extension_amr.png" />
+    <Content Include="Resources\file_extension_chm.png" />
+    <Content Include="Resources\file_extension_dll.png" />
+    <Content Include="Resources\file_extension_m4b.png" />
+    <Content Include="Resources\file_extension_m4v.png" />
+    <Content Include="Resources\file_extension_mid.png" />
+    <Content Include="Resources\file_extension_rtf.png" />
+    <Content Include="Resources\file_extension_txt.png" />
+    <Content Include="Resources\floppy_unmount3.png" />
+    <Content Include="Resources\folder-open-document-music.png" />
+    <Content Include="Resources\folder_classic_type_music.png" />
+    <Content Include="Resources\folder_explore.png" />
+    <Content Include="Resources\folder_modernist_type_music.png" />
+    <Content Include="Resources\gear yellow.png" />
+    <Content Include="Resources\gear--pencil.png" />
+    <Content Include="Resources\gear_16.png" />
+    <Content Include="Resources\gear__arrow.png" />
+    <Content Include="Resources\gear__exclamation.png" />
+    <Content Include="Resources\gear__minus.png" />
+    <Content Include="Resources\gear__plus.png" />
+    <Content Include="Resources\grayround.png" />
+    <Content Include="Resources\greenGrad1.bmp" />
+    <Content Include="Resources\gtk-refresh.ico" />
+    <Content Include="Resources\gtk-refresh.png" />
+    <Content Include="Resources\gtk-zoom-in.png" />
+    <Content Include="Resources\gtk-zoom-out.png" />
+    <Content Include="Resources\guitar.png" />
+    <Content Include="Resources\lightBlueFade.png" />
+    <Content Include="Resources\lightBlueFade2.png" />
+    <Content Include="Resources\lightGrayAlphaFade.png" />
+    <Content Include="Resources\lightGraySmall.png" />
+    <Content Include="Resources\lightGraySmall2.bmp" />
+    <Content Include="Resources\lightGraySmall2.png" />
+    <Content Include="Resources\lightGraySmall3.bmp" />
+    <Content Include="Resources\magnifier-zoom-in.png" />
+    <Content Include="Resources\magnifier-zoom-out.png" />
+    <Content Include="Resources\magnifier_zoom_in.png" />
+    <Content Include="Resources\media_controls_pause_small.png" />
+    <Content Include="Resources\media_controls_play_small.png" />
+    <Content Include="Resources\media_controls_stop_small.png" />
+    <Content Include="Resources\music %281%29.png" />
+    <Content Include="Resources\music--arrow.png" />
+    <Content Include="Resources\music--exclamation.png" />
+    <Content Include="Resources\music--minus.png" />
+    <Content Include="Resources\music--pencil.png" />
+    <Content Include="Resources\music--plus.png" />
+    <Content Include="Resources\music-beam-16.png" />
+    <Content Include="Resources\music.png" />
+    <Content Include="Resources\music_beam.png" />
+    <Content Include="Resources\music_green.png" />
+    <Content Include="Resources\music_grey.png" />
+    <Content Include="Resources\node-insert-next.png" />
+    <Content Include="Resources\node-select-all.png" />
+    <Content Include="Resources\node-tree.png" />
+    <Content Include="Resources\old-edit-find.png" />
+    <Content Include="Resources\OpenFolder.gif" />
+    <Content Include="Resources\page_white_zip.png" />
+    <Content Include="Resources\Partition.png" />
+    <Content Include="Resources\piano_exclamation.png" />
+    <Content Include="Resources\plug--arrow.png" />
+    <Content Include="Resources\plug--exclamation.png" />
+    <Content Include="Resources\plug--minus.png" />
+    <Content Include="Resources\plug_pencil.png" />
+    <Content Include="Resources\plug_plus.png" />
+    <Content Include="Resources\plus_16.png" />
+    <Content Include="Resources\Plus__Orange.png" />
+    <Content Include="Resources\rebuild.png" />
+    <Content Include="Resources\redx.png" />
+    <Content Include="Resources\remove_minus_sign_small.png" />
+    <Content Include="Resources\resultset_next.png" />
+    <Content Include="Resources\resultset_previous.png" />
+    <Content Include="Resources\slideIcon.gif" />
+    <Content Include="Resources\slideIcon.png" />
+    <Content Include="Resources\slideIcon.tif" />
+    <Content Include="Resources\special-offer %281%29.png" />
+    <Content Include="Resources\special-offer.png" />
+    <Content Include="Resources\Task.gif" />
+    <Content Include="Resources\tb3.png" />
+    <Content Include="Resources\textfield_rename.png" />
+    <Content Include="Resources\topbottom.png" />
+    <Content Include="Resources\topbottomblue.png" />
+    <Content Include="Resources\topbottomwhite.png" />
+    <None Include="Resources\ui-text-field-clear.png" />
+    <Content Include="Resources\USBBlueArrow.png" />
+    <Content Include="Resources\USBExcl.png" />
+    <Content Include="Resources\USBFlash.png" />
+    <Content Include="Resources\USBGreenPlus.png" />
+    <Content Include="Resources\USBLogo.png" />
+    <Content Include="Resources\USBPencil.png" />
+    <Content Include="Resources\USBRedMinus.png" />
+    <Content Include="Resources\USBXTAFGUI_v36.exe" />
+    <Content Include="Resources\x.png" />
+    <Content Include="Resources\XBJoy.gif" />
+    <Content Include="Resources\xgif.gif" />
+    <Content Include="Resources\XPDrive.gif" />
+    <Content Include="Resources\XPFolder.gif" />
+    <Content Include="Resources\XPLens.gif" />
+    <Content Include="Resources\XPRecycle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tools\EditorResources\EditorResources.csproj">
+      <Project>{f0f523da-3085-4be5-ac09-5f680f0e392e}</Project>
+      <Name>EditorResources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools\NAudio\NAudio.WindowsMediaFormat\NAudio.WindowsMediaFormat.csproj">
+      <Project>{1868FC77-FD6F-4881-9CF5-DE7451806BFA}</Project>
+      <Name>NAudio.WindowsMediaFormat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools\NAudio\NAudio\NAudio.csproj">
+      <Project>{DA4F02E3-0B5E-42CD-B8D9-5583FA51D66E}</Project>
+      <Name>NAudio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools\PitchTracker\PitchTracker.csproj">
+      <Project>{5B3976E0-4948-45EF-933F-056172687C7C}</Project>
+      <Name>PitchTracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools\PUECommon\PUECommon.csproj">
+      <Project>{7767D3DD-6E1C-419E-9092-F3F3DDDF3D87}</Project>
+      <Name>PUECommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools\Sanford.Multimedia.Midi\Sanford.Multimedia.Midi.csproj">
+      <Project>{4269C72A-8D3A-4737-8F89-72EAA33EA9E1}</Project>
+      <Name>Sanford.Multimedia.Midi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools\XPackage\XPackage\XPackage.csproj">
+      <Project>{EE644FE5-458F-496B-B9E3-0B37921F7D38}</Project>
+      <Name>XPackage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools\ZipLib\ZipLib.csproj">
+      <Project>{dd8f2458-ba45-43a9-b433-943b293d069e}</Project>
+      <Name>ZipLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
